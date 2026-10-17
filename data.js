@@ -1,0 +1,177 @@
+let projects = [
+  {
+    id: 1,
+    title: 'School Lunch Menu App',
+    ownerID: 1,
+    description:
+      'The cafeteria posts the menu on a paper sign by the door and nobody sees it until lunch. I want a page that shows what is on today and what is coming this week.',
+    skills: 'HTML, CSS, Design',
+    time: '3 hours/week',
+    location: 'Remote',
+    groupSize: 4,
+    memberIDs: [1, 6, 7],
+  },
+  {
+    id: 2,
+    title: 'Robotics Club Website Rebuild',
+    ownerID: 2,
+    description:
+      'Our club site has not been touched since 2019 and still lists the wrong meeting time. Need someone to write copy and someone to photograph the team and the robot.',
+    skills: 'HTML, CSS, Writing, Photography',
+    time: '2 hours/week',
+    location: 'Lincoln High, Room 214',
+    groupSize: 3,
+    memberIDs: [2, 1, 8],
+  },
+  {
+    id: 3,
+    title: 'Hallway Sounds: a Local History Podcast',
+    ownerID: 3,
+    description:
+      'Interviewing people who went to our school in the 80s about what the town used to be like. I have the recorder and the questions. I need an audio editor.',
+    skills: 'Audio editing, Interviewing, Research',
+    time: '4 hours/week',
+    location: 'Springfield, IL',
+    groupSize: 4,
+    memberIDs: [3, 5],
+  },
+  {
+    id: 4,
+    title: 'Internship: Social Media at Riverside Vet Clinic',
+    ownerID: 4,
+    description:
+      'Paid summer internship at my aunt\u2019s vet clinic, three mornings a week. Post photos of the animals, answer messages, help at the front desk. Applications close May 1.',
+    skills: 'Social media, Writing, Customer service',
+    time: '12 hours/week',
+    location: 'Riverside, CA',
+    groupSize: 2,
+    memberIDs: [4],
+  },
+  {
+    id: 5,
+    title: 'Tutoring Sign-Up Board',
+    ownerID: 1,
+    description:
+      'Tutoring gets arranged in a group chat and people get double booked constantly. A board where tutors post free hours and students claim a slot would fix it.',
+    skills: 'JavaScript, HTML, Organizing',
+    time: '3 hours/week',
+    location: 'Remote',
+    groupSize: 3,
+    memberIDs: [1, 3, 7],
+  },
+  {
+    id: 6,
+    title: 'Game Jam Team: 2D Platformer',
+    ownerID: 5,
+    description:
+      'Short platformer where you play a kid trying to get to class before the bell. I can do the code. I need a pixel artist and someone who can make chiptune music.',
+    skills: 'Pixel art, Music, JavaScript',
+    time: '6 hours/week',
+    location: 'Remote',
+    groupSize: 4,
+    memberIDs: [5, 8, 6],
+  },
+  {
+    id: 7,
+    title: 'Community Garden Map',
+    ownerID: 6,
+    description:
+      'There are eleven community gardens in the county and no list of them anywhere. I want a simple map with opening hours and who to contact about a plot.',
+    skills: 'Maps, HTML, Research',
+    time: '2 hours/week',
+    location: 'Durham, NC',
+    groupSize: 3,
+    memberIDs: [6, 2],
+  },
+  {
+    id: 8,
+    title: 'Debate Timer App',
+    ownerID: 7,
+    description:
+      'Every debate round we use three phone timers and someone always forgets to start one. One screen, the right time limits already set up for each format.',
+    skills: 'JavaScript, Design',
+    time: '2 hours/week',
+    location: 'Remote',
+    groupSize: 2,
+    memberIDs: [7, 4],
+  },
+];
+
+let profiles = [
+  {
+    id: 1,
+    name: 'Maya Chen',
+    username: 'mayachen',
+    email: 'maya.chen@lincolnhs.edu',
+    bio: 'Junior at Lincoln High. I like making small useful things. Slowly learning JavaScript. Usually free after 4pm.',
+    links: ['github.com/mayachen', 'mayachen.dev'],
+  },
+  {
+    id: 2,
+    name: 'Devon Parker',
+    username: 'dparker',
+    email: 'devon.parker@lincolnhs.edu',
+    bio: 'Robotics club president. Better at hardware than websites, which is why I keep asking for help with websites.',
+    links: ['github.com/dparker'],
+  },
+  {
+    id: 3,
+    name: 'Aisha Rahman',
+    username: 'aisharahman',
+    email: 'aisha.r@springfieldhs.edu',
+    bio: 'I make radio. Interested in local history and in talking to people who think nobody wants to hear their story.',
+    links: ['hallwaysounds.example.com'],
+  },
+  {
+    id: 4,
+    name: 'Jordan Alvarez',
+    username: 'jalvarez',
+    email: 'jordan.alvarez@riversidehs.edu',
+    bio: 'Senior. Mostly here to find people to work with. I can write and I am not scared of a phone call.',
+    links: ['linkedin.com/in/jalvarez'],
+  },
+  {
+    id: 5,
+    name: 'Sam Okafor',
+    username: 'samokafor',
+    email: 'sam.okafor@lincolnhs.edu',
+    bio: 'Games, mostly. I have finished four jams and abandoned about twenty projects. Working on the ratio.',
+    links: ['samokafor.itch.io', 'github.com/samokafor'],
+  },
+  {
+    id: 6,
+    name: 'Priya Nair',
+    username: 'priyanair',
+    email: 'priya.nair@durhamhs.edu',
+    bio: 'Sophomore. Interested in maps, cities, and why things are where they are. Teaching myself CSS.',
+    links: ['github.com/priyanair'],
+  },
+  {
+    id: 7,
+    name: 'Marcus Webb',
+    username: 'mwebb',
+    email: 'marcus.webb@lincolnhs.edu',
+    bio: 'Debate, and building little tools for debate. If it has a timer in it I probably want to help.',
+    links: ['github.com/mwebb'],
+  },
+  {
+    id: 8,
+    name: 'Lena Fischer',
+    username: 'lenafischer',
+    email: 'lena.fischer@lincolnhs.edu',
+    bio: 'I take photos and I am learning to draw pixel art. Happy to be the person who makes the thing look good.',
+    links: ['lenafischer.example.com'],
+  },
+  {
+    id: 9,
+    name: 'Theo Nakamura',
+    username: 'theonak',
+    email: 'theo.nakamura@lincolnhs.edu',
+    bio: 'Freshman. Have not joined anything yet. Looking for a first project that will not be over my head.',
+    links: [],
+  },
+];
+
+let currentUserID = 9;
+
+let appName = "Affinity";

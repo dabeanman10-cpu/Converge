@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+    <link id="theme-stylesheet" rel="stylesheet" href="styleslight.css" />  
+  </head>
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const themeStylesheet = document.getElementById('theme-stylesheet');
+
+    // Check if user previously saved a theme preference
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'dark') {
+      themeStylesheet.setAttribute('href', 'stylesdark.css');
+      toggleBtn.textContent = '☀️ Light Mode';
+    } else {
+      themeStylesheet.setAttribute('href', 'styleslight.css');
+      toggleBtn.textContent = '🌙 Dark Mode';
+    }
+
+    // Handle button click
+    toggleBtn.addEventListener('click', () => {
+      const currentTheme = themeStylesheet.getAttribute('href');
+
+      if (currentTheme === 'styleslight.css') {
+        themeStylesheet.setAttribute('href', 'stylesdark.css');
+        toggleBtn.textContent = '☀️ Light Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        themeStylesheet.setAttribute('href', 'styleslight.css');
+        toggleBtn.textContent = '🌙 Dark Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+
+  <body class="">
+    <div class="headersection">
+      <h1 class="hearder-title">Create Project</h1>
+      <button type="button" class="backbutton" onclick="history.back()">
+        &larr; Back
+        </button>
+      <div class="form-card">
+        <input class="form-input" id="title-input" type="text" placeholder="Title">
+        <input class="form-input" id="description-input" type="text" placeholder="Description">     
+        <input class="form-input" id="skills-input" type="text" placeholder="Skills Questions">
+        <input class="form-input" id="time-input" type="text" placeholder="Time">
+        <input class="form-input" id="location-input" type="text" placeholder="Location">
+        <input class="form-input" id="groupSize-input" type="number" placeholder="Group Size">
+        <button type="button" class="otherbutton" onclick="createProject()">Post Project</button>
+      </div>
+
+      <script src="data.js"></script>
+      <script src="helpers.js"></script>
+
+      <div class="feed" id="project"></div>
+      <div class = "navbar">
+        <a href = "index.html" class="navelement">Feed</a>
+        <a href = "create.html" class="active" class="navelement">Create</a>
+        <a onclick= "window.location.href = 'profile.html?id=' + currentUserID" class="navelement"> Profile</a>
+      </div>
+  </body>
+</html>

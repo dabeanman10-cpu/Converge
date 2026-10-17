@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Default theme link with an id so JavaScript can change its href -->
+    <link id="theme-stylesheet" rel="stylesheet" href="styleslight.css" />
+
+
+
+ 
+  </head>
+  <body>
+    <!-- Theme Toggle Button in the Top Right -->
+    <button id="theme-toggle" class="theme-toggle-btn">
+      🌙 Dark Mode
+    </button>
+
+    <div class="headersection">
+      <h1 class="hearder-title">Congressional APP</h1>
+      <a class="create" href="create.html">Create Project</a>
+    </div>
+
+    <h2 class="screen-title">Projects</h2>
+    <div class="feed" id="feed"></div>
+
+    <script src="data.js"></script>
+    <script src="helpers.js"></script>
+    <script src="feed.js"></script>
+
+    <!-- Script to handle switching stylesheets and saving user preference -->
+    <script>
+      const toggleBtn = document.getElementById('theme-toggle');
+      const themeStylesheet = document.getElementById('theme-stylesheet');
+
+      // Check if user previously saved a theme preference
+      const savedTheme = localStorage.getItem('theme');
+
+      if (savedTheme === 'dark') {
+        themeStylesheet.setAttribute('href', 'stylesdark.css');
+        toggleBtn.textContent = '☀️ Light Mode';
+      } else {
+        themeStylesheet.setAttribute('href', 'styleslight.css');
+        toggleBtn.textContent = '🌙 Dark Mode';
+      }
+
+      // Handle button click
+      toggleBtn.addEventListener('click', () => {
+        const currentTheme = themeStylesheet.getAttribute('href');
+
+        if (currentTheme === 'styleslight.css') {
+          themeStylesheet.setAttribute('href', 'stylesdark.css');
+          toggleBtn.textContent = '☀️ Light Mode';
+          localStorage.setItem('theme', 'dark');
+        } else {
+          themeStylesheet.setAttribute('href', 'styleslight.css');
+          toggleBtn.textContent = '🌙 Dark Mode';
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    </script>
+
+<div class="feed" id="project"></div>
+<div class = "navbar">
+  <a href = "index.html" class="active" class="navelement">Feed</a>
+  <a href = "create.html" class="navelement">Create</a>
+  <a onclick= "window.location.href = 'profile.html?id=' + currentUserID" class="navelement"> Profile</a>
+</div>
+    </body>
+  </html>

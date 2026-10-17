@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link id="theme-stylesheet" rel="stylesheet" href="styleslight.css" />  
+  </head>
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const themeStylesheet = document.getElementById('theme-stylesheet');
+
+    // Check if user previously saved a theme preference
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'dark') {
+      themeStylesheet.setAttribute('href', 'stylesdark.css');
+      toggleBtn.textContent = '☀️ Light Mode';
+    } else {
+      themeStylesheet.setAttribute('href', 'styleslight.css');
+      toggleBtn.textContent = '🌙 Dark Mode';
+    }
+
+    // Handle button click
+    toggleBtn.addEventListener('click', () => {
+      const currentTheme = themeStylesheet.getAttribute('href');
+
+      if (currentTheme === 'styleslight.css') {
+        themeStylesheet.setAttribute('href', 'stylesdark.css');
+        toggleBtn.textContent = '☀️ Light Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        themeStylesheet.setAttribute('href', 'styleslight.css');
+        toggleBtn.textContent = '🌙 Dark Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+
+  <body class="">
+    <div class="headersection">
+      <h1 class="page2-title">Congressional APP</h1>
+      <button type="button" class="backbutton" onclick="history.back()">
+        &larr; Back
+        </button>
+    </div>
+    <div class="feed" id="profile"></div>
+    <div>
+      <script src="data.js"></script>
+      <script src="helpers.js"></script>
+      <script src="profile.js"></script>
+    </div>
+
+    <div class="feed" id="project"></div>
+    <div class = "navbar">
+      <a href = "index.html" class="navelement">Feed</a>
+      <a href = "create.html" class="navelement">Create</a>
+      <a onclick= "window.location.href = 'profile.html?id=' + currentUserID" class="active" class="navelement"> Profile</a>
+    </div>
+  </body>
+</html>

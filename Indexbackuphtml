@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+
+
+  <body class="">
+    
+
+
+    <div class="headersection">
+      <h1 class="hearder-title">Congressional APP</h1>
+      <p class="header-discription">Description</p>
+
+    </div>
+
+    <h2 class="screen-title">Projects</h2>
+    
+    <div class="projects">
+    <div class="project-card">
+      <div class="card-header">
+        <div class="avatar">E</div>
+        <div class="card-info">
+        <h3 class="card-title">Papa's Sandwhicheria</h3>
+        <p class="card-owner"> Posted by Evan</p>
+    </div>
+  </div>
+    
+    <p class="card-description">Making Sandwitches for the world</p>
+    
+    <div class="card-tags">
+      <p class="tag">Html</p>
+      <p class="tag">AI</p>
+      <p class="tag">swimming</p>
+      <p class="tag">bigthinking</p>
+    </div>
+    <p class="card-footer">3hrs a week 4 weeks 1/4 people</p>
+  </div>
+
+    <div class="project-card">
+      <div class="card-header">
+        <div class="avatar">A</div>
+        <div class="card-info">
+          <h3 class="card-title">Burger Spot</h3>        
+          <p class="card-owner"> Posted by Anderson</p>
+      </div>
+    </div>
+
+    <p class="card-description">Making Burgers for people</p>
+    <div class="card-tags">
+      <p class="tag">Burger</p>
+      <p class="tag">Flipper</p>
+      <p class="tag">Chef</p>
+      <p class="tag">Anything</p>
+    </div>
+    <p class="card-footer">2hrs a week 3 weeks 1/3 people</p>
+  </div>
+  <div class="project-card">
+    <div class="card-header">
+      <div class="avatar">D</div>
+      <div class="card-info">
+        <h3 class="card-title">ice Cream palce</h3>        
+        <p class="card-owner"> Posted by Dingus</p>
+    </div>
+</div>
+
+  <p class="card-description">Making ice cream for people</p>
+  <div class="card-tags">
+      <p class="tag">Ice</p>
+      <p class="tag">Cream</p>
+      <p class="tag">Chef</p>
+      <p class="tag">Anything</p>
+    </div>
+    <p class="card-footer">1hrs a week 3 weeks 1/67 people</p>
+  </div>
+  </body>
+</html>
