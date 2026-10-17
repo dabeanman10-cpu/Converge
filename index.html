@@ -7,10 +7,31 @@
     <!-- Default theme link with an id so JavaScript can change its href -->
     <link id="theme-stylesheet" rel="stylesheet" href="styleslight.css" />
 
+    <style>
+      /* Styling for the top-right toggle button */
+      .theme-toggle-btn {
+        position: fixed;
+        top: 12px;
+        right: 12px;
+        z-index: 1000;
+        padding: 6px 12px;
+        font-size: 13px;
+        font-weight: bold;
+        border: 2px solid #000;
+        border-radius: 20px;
+        background-color: #ffffff;
+        color: #000000;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        transition: all 0.2s ease;
+      }
 
-
- 
+      .theme-toggle-btn:hover {
+        transform: scale(1.05);
+      }
+    </style>
   </head>
+
   <body>
     <!-- Theme Toggle Button in the Top Right -->
     <button id="theme-toggle" class="theme-toggle-btn">
@@ -60,12 +81,5 @@
         }
       });
     </script>
-
-<div class="feed" id="project"></div>
-<div class = "navbar">
-  <a href = "index.html" class="active" class="navelement">Feed</a>
-  <a href = "create.html" class="navelement">Create</a>
-  <a onclick= "window.location.href = 'profile.html?id=' + currentUserID" class="navelement"> Profile</a>
-</div>
-    </body>
-  </html>
+  </body>
+</html>

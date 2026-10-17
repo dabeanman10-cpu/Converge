@@ -85,4 +85,25 @@ function loadData() {
   }
 }
 
+function removeMemberFromProject(projectID, userID) {
+  let project = getProject(projectID);
+  if (project) {
+    project.memberIDs = project.memberIDs.filter(id => id !== userID);
+    saveData();
+    window.location.reload();
+  }
+}
+
+function addMemberFromProject(projectID, userID) {
+  let project = getProject(projectID);
+  
+  if (project) {
+    if (!project.memberIDs.includes(userID)) {
+      project.memberIDs.push(userID); 
+      saveData();
+    }
+    window.location.reload();
+    loadData();
+  }
+}
 loadData();

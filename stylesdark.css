@@ -1,11 +1,9 @@
 body {
   background: #222222;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: rgb(177, 177, 177);
 
   padding: 16px;
-  padding-bottom: 100px;
   max-width: 420px;
 }
 
@@ -17,6 +15,7 @@ body {
 .header-discription {
   font-size: 14px;
   color: rgb(164, 80, 212);
+
 }
 
 .screen-title {
@@ -59,7 +58,7 @@ body {
   gap: 10px;
 }
 
-.card-info {
+.card-info  {
   display: flex;
   flex-direction: column;
   gap: 1px;
@@ -72,6 +71,8 @@ body {
   height: 30px;
   border-radius: 40px;
   box-shadow: 00 0 20px rgb(183, 138, 255);
+  ;
+
   font-size: 18px;
   font-weight: bold;
 
@@ -84,10 +85,11 @@ body {
   display: flex;
   flex-direction: row;
   gap: 8px;
+  color: rgb(141, 105, 27);
 }
 
 .tag {
-  background: #78b6e8;
+  background: #000000;
   border: #000000;
   font-size: 12px;
   font-weight: bold;
@@ -111,11 +113,11 @@ body {
 .button {
   /* Display as inline-block so padding and height apply properly */
   display: inline-block;
-
+  
   color: #3d3434;
   font-size: 16px;
   font-weight: bold;
-  text-decoration: none;
+  text-decoration: none; 
   transition: background-color 0.2s ease;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -124,11 +126,13 @@ body {
 .page2-title {
   font-size: 25px;
   font-weight: bold;
+
 }
 
 .page2-discription {
   font-size: 14px;
   color: rgb(11, 135, 19);
+
 }
 
 .page2-card {
@@ -141,6 +145,7 @@ body {
   gap: 8px;
   min-height: 300px;
 }
+
 
 .page2-title {
   font-size: 30px;
@@ -186,40 +191,42 @@ body {
   font-weight: bold;
   margin: 5px;
 }
-.card-link {
+.card-link{
   text-decoration: none;
   color: inherit;
+  
+
 }
-.feed {
+.feed{
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.members-list {
+.members-list{
   display: flex;
   flex-direction: row;
   gap: 10px;
-  margin-top: 12px;
+  margin-top:12px;
   margin-bottom: 12px;
   flex-wrap: wrap;
 }
-.member {
-  display: flex;
+.member{
+  display:flex;
   flex-direction: column;
-  align-items: center;
+  align-items:center;
   gap: 4px;
   width: 30px;
   text-decoration: none;
   color: rgb(183, 138, 255);
 }
-.member-name {
+.member-name{
   font-size: 11px;
   text-align: center;
   margin: 0px;
-  line-height: 1.2;
+  line-height:1.2;
 }
-.create {
-  display: block;
+.create{
+  display:block;
   margin: 0 auto;
   padding: 16px;
   text-align: center;
@@ -228,45 +235,45 @@ body {
   border-width: 2px;
   background-color: rgb(48, 46, 85);
   border-radius: 99px;
-  color: rgb(253, 251, 225);
+  color:  rgb(253, 251, 225);
   box-shadow: 00 0 20px rgb(255, 250, 175);
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 35px;
   letter-spacing: 5px;
 }
-.project-questions {
+.project-questions{
   font-size: 20px;
   text-align: center;
   color: rgb(9, 87, 117);
-  border-radius: 10px;
-  border: 3px;
+  border-radius:10px;
+  border:3px;
   border-color: #000000;
-  width: 250px;
-  background: #ffffff;
+  width:250px;
+  background:#ffffff;
 }
-.projectList {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 4px;
+.projectList{
+display: flex;
+flex-direction: column;
+gap: 8px;
+margin-top: 4px;
 }
-.myproject {
-  display: block;
-  text-decoration: none;
-  color: #000000;
-  background: rgb(112, 112, 112);
-  border: 1px solid #000000;
-  border-radius: 10px;
-  padding: 2px;
+.myproject{
+display: block;
+text-decoration: none;
+color: #000000;
+background: rgb(112, 112, 112);
+border: 1px solid #000000;
+border-radius: 10px;
+padding: 2px;
 }
-.backbutton {
+.backbutton{
   display: inline-block;
   text-decoration: none;
   margin-bottom: 16px;
   margin-top: 8px;
   font-weight: bold;
-  font-size: 16px;
-  background-color: #77808f;
+  font-size:16px;
+  background-color:#77808f;
 }
 
 .form-card {
@@ -277,6 +284,7 @@ body {
   gap: 2px;
   padding: 12px;
 }
+
 
 .form-input {
   border: 2px solid #9a9696;
@@ -298,56 +306,3 @@ body {
   text-align: center;
 }
 
-.theme-toggle-btn {
-  position: fixed;
-  top: 12px;
-  right: 12px;
-  z-index: 1000;
-  padding: 6px 12px;
-  font-size: 13px;
-  font-weight: bold;
-  border: 2px solid #000;
-  border-radius: 20px;
-  background-color: #ffffff;
-  color: #000000;
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease;
-}
-
-.theme-toggle-btn:hover {
-  transform: scale(1.05);
-}
-
-.navbar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 20px;
-  display: flex;
-  justify-content: space-around;
-  background: #505050;
-  font-weight: bold;
-  align-items: center;
-}
-
-.navbar a {
-  color: #f6f6f6;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.active {
-  background: #000000;
-  padding: 10px;
-  border-radius: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.navelement {
-  justify-content: center;
-}

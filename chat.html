@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link id="theme-stylesheet" rel="stylesheet" href="styleslight.css" />  
+  </head>
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const themeStylesheet = document.getElementById('theme-stylesheet');
+
+    // Check if user previously saved a theme preference
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'dark') {
+      themeStylesheet.setAttribute('href', 'stylesdark.css');
+      toggleBtn.textContent = '☀️ Light Mode';
+    } else {
+      themeStylesheet.setAttribute('href', 'styleslight.css');
+      toggleBtn.textContent = '🌙 Dark Mode';
+    }
+
+    // Handle button click
+    toggleBtn.addEventListener('click', () => {
+      const currentTheme = themeStylesheet.getAttribute('href');
+
+      if (currentTheme === 'styleslight.css') {
+        themeStylesheet.setAttribute('href', 'stylesdark.css');
+        toggleBtn.textContent = '☀️ Light Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        themeStylesheet.setAttribute('href', 'styleslight.css');
+        toggleBtn.textContent = '🌙 Dark Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+  <body>
+    <button type="button" class="backbutton" onclick="history.back()">
+      &larr; Back
+      </button>
+    <h1>Chat Doesn't Work Right Now Try Again Later!</h1>
+  </body>
+</html>
