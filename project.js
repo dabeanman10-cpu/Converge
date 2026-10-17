@@ -6,14 +6,6 @@ membersHTML = '';
 let project = getProject(projectId);
 let owner = getProfile(project.ownerID);
 
-let onProject = isMember(project, currentUserID);
-
-if (onProject) {
-  buttonhtml = `<button type="button" class="otherbutton" onclick="removeMemberFromProject(projectId, currentUserID)">Leave Now</button>`;
-} else {
-  buttonhtml = `<button type="button" class="otherbutton" onclick="addMemberFromProject(projectId, currentUserID)">Join</button>`;
-}
-
 for (let memberID of project.memberIDs) {
   let member = getProfile(memberID);
   membersHTML =
@@ -53,10 +45,11 @@ htmlCode =
   <p class="times">${project.groupSize}</p>
   <p class = "time">Members</p>
   <div class="members-list">${membersHTML}</div>
-  <button class="chat" type="button" onclick="location.href='chat.html'">Chat</button>
+
 </div>
 
-${buttonhtml} 
-`;
+<button type="button" class="otherbutton">Apply Now!</button>
+
+  `;
 
 document.getElementById('project').innerHTML = htmlCode;
